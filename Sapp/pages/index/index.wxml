@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view class="container">
+<!--头部-->
+<view class="indexNavBar">
+    <view class="left">
+        <image src="http://117.21.209.214/nanfeng/nanfengWap20161214/images/indexNavigatorIcon.png" mode="widthFix" class="img" bindtap="location"></image>
+        <text class="name">{{cityName}}</text>
+    </view>
+    <view class="searchInput">
+        <input type="text" placeholder="请输入搜索内容" placeholder-style="color:#fff;font-size:12px;" />
+    </view>
+    <view class="right">
+        <text>{{weather}}</text>
+    </view>
+</view>
+<!--轮播图-->
+    <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper">
+    <block wx:for="{{imgUrls}}">
+        <swiper-item>
+        <image src="{{item}}" class="slide-image"  height="150"/>
+        </swiper-item>
+    </block>
+    </swiper>
+<!--八大功能块-->
+    <view class="indexGrid">
+        <navigator url="{{iconUrls[index].linkUrl}}" wx:for="{{iconUrls}}">
+        <view class="grid-3">
+            <image src="{{item.url}}" mode="widthFix"></image>
+            <text>{{item.name}}</text>
+        </view>
+        </navigator>
+    </view>
+    <!--旅游资讯-->
+    <view class="tourInfo">
+        <view class="tourInfoTitle">
+            <text class="name">旅游资讯</text>
+            <text class="more">更多 <text class="fa fa-angle-right"></text></text>
+        </view>
+        <view class="tourDiv">
+            <navigator url="{{item.taplink}}" wx:for="{{tourDiv}}">
+            <view class="grid-4">
+                <image src="{{item.url}}" mode="widthFix"></image>
+                <text class="title">{{item.title}}</text>
+                <label class="bg"></label>
+            </view>
+            </navigator>
+        </view>
+    </view>
+    <!--热门活动-->
+    <view class="hotAct">
+        <view class="title">热门活动</view>
+        <view class="grid">
+            <view class="gridItem" wx:for="{{hotAct}}">
+                <navigator url="{{item.hotActLink}}">
+                <image src="{{item.url}}" mode="aspectFill" style="width:100%;height:120px;"></image>
+                <text class="title">{{item.title}}</text>
+                </navigator>
+            </view>
+        </view>
+
+    </view>
+
+<!--<include src="../common/footer.wxml"/>-->
+</view>

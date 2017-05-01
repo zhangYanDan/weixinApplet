@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/index/index",    
+    "pages/food/food",
+    "pages/spot/spot",
+    "pages/weather/weather"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+      "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "resource/images/icon4gray.png",
+        "selectedIconPath": "resource/images/icon4blue.png"
+      },{
+        "pagePath": "pages/index/index",
+        "text": "附近",
+        "iconPath": "resource/images/icon1gray.png",
+        "selectedIconPath": "resource/images/icon1blue.png"
+      },{
+        "pagePath": "pages/weather/weather",
+        "text": "天气",
+        "iconPath": "resource/images/icon2gray.png",
+        "selectedIconPath": "resource/images/icon2blue.png"
+      }]
+    }
+ 
+    
+}

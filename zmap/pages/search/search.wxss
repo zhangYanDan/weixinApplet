@@ -1,0 +1,15 @@
+/* pages/search/search.wxss */
+.search_local{background:#f2f2f2;border:1px solid #d5d7d9;padding:5px 0;overflow:hidden;}
+.search_local navigator{width:10%;float:left;display: block;}
+.search_local navigator label{text-align: center;font-size:22px;padding-left:10px;padding-right:10px;}
+.search_local .wrap{width:85%;float:left;display: block;background:#fff;}
+.search_local label,.search_local input,.search_local navigator{display: inline-block;}
+.search_local input{font-size:14px;vertical-align: middle;padding-left:10px;}
+.search_local icon{vertical-align: middle;padding-left:5px;}
+
+.resultList{padding:10px;border-bottom:1px solid #d5d7d9;}
+.resultList text{padding:5px 0;display: block;}
+.resultList .name{color:#1296DB;font-size:16px;}
+.resultList .address{color:#999;font-size:12px;}
+.resultList .distance{color:#666;font-size:12px;}
+.resultList .address .lineLabel{background:#1296DB;color:#fff;font-size:12px;padding:1px 2px;margin:3px;display:inline-block;}

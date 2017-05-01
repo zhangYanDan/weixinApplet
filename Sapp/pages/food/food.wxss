@@ -1,0 +1,8 @@
+.tabDiv{width:98%;display: block;margin:10px auto;overflow:hidden;border:1px solid #ff6619;border-radius: 5px;}
+.tabDiv .tab{width:50%;float:left;text-align: center;color:#ff6619;box-sizing: border-box;padding:8px 0;font-size:16px;border-right:1px solid #ff6619;}
+.tabDiv .tab:last-child{border-right:0;}
+.tabDiv .actTab{background:#ff6619;color:#fff;}
+.list{width:98%;margin:0 auto;display: block;} 
+.list .item{width:50%;display: block;float:left;}
+.list .item image{width:90%;border-radius: 5px;}
+.list .name{color:#757575;font-size:14px;text-align: center;margin:5px 0;display: block;}

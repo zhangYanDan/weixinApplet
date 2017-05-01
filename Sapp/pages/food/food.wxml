@@ -1,0 +1,20 @@
+<!--轮播图-->
+<swiper indicator-dots="{{indicatorDots}}"
+autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper">
+    <block wx:for="{{slide}}">
+        <swiper-item>
+        <image src="{{item.imgSrc}}" style="width:100%;" mode="aspectFix" />
+        </swiper-item>
+    </block>
+</swiper>
+
+<view class="tabDiv">
+    <view class="tab {{actTabNum=='1' ? 'actTab':''}}" bindtap="food">特色美食</view>
+    <view class="tab {{actTabNum=='2' ? 'actTab':''}}" bindtap="store">美食门店</view>
+</view>
+<view class="list">
+    <view class="item" wx:for="{{listResult}}" >
+        <image style="width:95%;margin:0 1%;height:150px;background:url('../../resource/images/loading.jpg') no-repeat;background-size:cover;" src="{{img}}{{item.icon}}" mode="aspectFix"></image>
+        <text class="name">{{item.name}}</text>
+    </view>
+</view>

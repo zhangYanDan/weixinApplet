@@ -1,0 +1,10 @@
+<!--pages/bus_detail/bus_detail.wxml-->
+<view class="busContainer">
+    <view class="title">公交换乘方案</view>
+    <view class="busList" wx:for="{{transits}}">
+        <text class="index">方案{{index+1}}、</text>
+        <text>金额：{{item.cost}}元</text>
+        <text>预计时间：{{item.duration}}分钟</text>
+        <text>需要步行{{item.walking_distance}}米</text>
+    </view>
+</view>

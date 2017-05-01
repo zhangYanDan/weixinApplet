@@ -1,0 +1,4 @@
+
+<view class="map_box" style="height:{{windowH}}px">
+  <map id="navi_map" width="100%" height="100%" longitude="{{longitude}}" latitude="{{latitude}}" scale="12" show-location="true" controls="{{controls}}" bindcontroltap="controlstap"></map>
+</view>

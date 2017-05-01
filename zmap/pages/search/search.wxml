@@ -1,0 +1,16 @@
+<view class="search_local">
+<navigator url="../map/map" open-type="navigateBack"><label class="fa fa-angle-left"></label></navigator>
+  <view class="wrap">
+    <icon type="search" size="18" />
+    <input type="text" auto-focus='true' placeholder="搜索" confirm-type="搜索"  bindconfirm="confirmInput"/>
+  </view>
+</view>
+
+<scroll-view scroll-y="true" style="height:{{windowH-34}}px">
+  <view class="resultList" wx:for="{{searchResult}}" bindtap="goRoutePlan" data-id="{{index}}">
+    <text class="name">{{item.name}}</text>
+    <view class="address" wx:if="{{item.address.length >1}}"><label wx:for="{{item.address}}" wx:for-item="adsItem" wx:for-index="idx" class="lineLabel">{{item.address[idx]}}</label></view>
+    <text class="address" wx:elif="{{item.address.length <=1}}">{{item.address}}</text>
+    <text class="distance">{{item.distance}}公里</text>
+  </view>
+</scroll-view>
